@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Google Search Console verification
+# Sitemap for faster indexing
+Sitemap: https://reyhansingh.in/sitemap.xml
+
+# Allow all major bots
+User-agent: Googlebot
+Allow: /
+Disallow: /private/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /private/
+
+User-agent: Slurp
+Allow: /
+Disallow: /private/
