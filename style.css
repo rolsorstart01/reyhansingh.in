@@ -2,16 +2,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --bg-color: #030014;
+    --bg-color: #0d1516;
+    /* Dark slate background matching logo */
     --text-primary: #ffffff;
-    --text-secondary: #a1a1aa;
-    --accent-color: #7042f8;
-    --accent-glow: rgba(112, 66, 248, 0.5);
+    --text-secondary: #94a3b8;
+    --accent-color: #38b6ff;
+    /* Vibrant blue from logo */
+    --accent-glow: rgba(56, 182, 255, 0.4);
     --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.05);
-    --nav-glass: rgba(3, 0, 20, 0.7);
-    --card-hover: rgba(255, 255, 255, 0.06);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --nav-glass: rgba(13, 21, 22, 0.8);
+    --card-hover: rgba(56, 182, 255, 0.04);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Logo Styling */
+.logo {
+    position: absolute;
+    left: 0;
+}
+
+#site-logo {
+    height: 56px;
+    width: auto;
+    display: block;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+#site-logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px var(--accent-glow));
 }
 
 /* Reset & Base Styles */
@@ -29,8 +50,8 @@ body {
     overflow-x: hidden;
     /* Subtle background grid/gradient */
     background-image:
-        radial-gradient(circle at 10% 20%, rgba(76, 29, 149, 0.2) 0%, transparent 40%),
-        radial-gradient(circle at 90% 80%, rgba(124, 58, 237, 0.15) 0%, transparent 40%);
+        radial-gradient(circle at 10% 20%, rgba(56, 182, 255, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(13, 21, 22, 0.15) 0%, transparent 40%);
     min-height: 100vh;
 }
 
@@ -62,10 +83,16 @@ header {
 
 header div {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1500px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    position: relative;
+    padding: 0 1rem;
+}
+
+nav {
+    margin-left: 5rem;
 }
 
 /* Optional: Add a logo text if desired, but sticking to structure */
@@ -117,7 +144,7 @@ h1 {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    background: linear-gradient(to right, #fff, #a78bfa);
+    background: linear-gradient(to right, #fff, var(--accent-color));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -145,7 +172,7 @@ p {
 .card:hover {
     transform: translateY(-5px);
     background: var(--card-hover);
-    border-color: rgba(112, 66, 248, 0.3);
+    border-color: rgba(56, 182, 255, 0.3);
     box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
 }
 
@@ -209,6 +236,7 @@ footer {
     width: 50%;
     height: auto
 }
+
 .acheivment1 {
- text-align: center
+    text-align: center
 }
